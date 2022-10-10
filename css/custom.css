@@ -1,3 +1,10 @@
+hr
+{
+  border-style: solid;
+  border-color: #bd2a34;
+  border-width: 1px;
+}
+
 body
 {
   padding-top:40px

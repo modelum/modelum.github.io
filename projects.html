@@ -12,7 +12,57 @@
   <body>
     <div class="container">
       <div class="row" id="header"></div><br>
+      <div class="row section-separator">
+        <h2>ASE4AllDB - An Agile Development Approach for the NoSQL Database Schema Evolution: Data and Code Migration</h2>
+        <div class="col-md-12">
+          <br>
+          <dl class="row">
+            <dt class="col-sm-3">Reference</dt><dd class="col-sm-9">PID2020-117391GB-I00 - Proyectos de I+D+i - Convocatoria 2020<br>Ministerio de Ciencia e Innovación</dd>
+            <dt class="col-sm-3">Duration</dt><dd class="col-sm-9">01.06.2021 - 31.06.2024</dd>
+            <dt class="col-sm-3">Funding</dt><dd class="col-sm-9">30.400€</dd>
+            <dt class="col-sm-3">Public repository</dt><dd class="col-sm-9"><a href="https://github.com/modelum">https://github.com/modelum/</a></dd>
+          </dl>
+        </div>
+      </div>
       <div class="row">
+        <h3>Abstract</h3>
+        <p>
+          Database schema evolution is a crucial challenge in the development of data-intensive use applications. Through the lifecycle of software applications, the database schemas have to be changed to satisfy new requirements or improve aspects such as data quality or data access performance. Whenever schemas are changed, stored data and the code of applications must co-evolve to adapt to the new schema. Since the earliest database systems, industrial and academic communities have been devoting a great effort to tackle the database evolution problem, and a number of tools have been created to manage schema changes, which range from workbenches of DBMS vendors to research prototypes. In the early years of the last decade, a new kind of tools emerged as agile practices became widely adopted.
+        </p>
+        <p>
+          Applications consist of code and databases, and agile practices must also be applied on databases, not only on the code. Therefore, agile database development (ADD) practices have attracted great interest to manage schema changes, namely continuous integration, automated testing, and the usage of static code analyzers to check code errors. In fact, tools supporting version control of databases and data migration are available since the beginning of the last decade.
+        </p>
+        <p>
+          Although relational systems are still predominant, the adoption of NoSQL stores is growing, as shown in the popularity rankings and market research studies. There are four main NoSQL data model paradigms (document, columnar, graph, and key-value), and each of them is convenient to overcome limitations of relational systems in some kind of application. However, there are currently no tools that support ADD practices available for NoSQL stores. Another significant limitation of most existing tools to manage schema changes is the lack of mechanisms aimed to assist developers in upgrading the code (queries). To our knowledge, only the PRISM++ tool offers support to rewrite SQL queries. Our research proposal will try to overcome these limitations by building a platform-independent ADD tooling with novelty features such as helping developers in the query migration. It is worth to remark that this topic has not been addressed in the very limited number of papers published on NoSQL schema evolution.
+        </p>
+        <p>
+          The aim of the project is therefore to build a tooling able to support ADD in the context of relational and non-relational (NoSQL) databases. The created tool should include the following features: (i) to provide capabilities like those currently offered for relational systems as in Liquibase or Flyway to support continuous development practices, but augmented for a wider range of databases, (ii) to help developers to upgrade query-related code by means of code rewriting (when possible) and suggestions, (iii) to apply database refactoring and other optimizations, and (iv) to measure the cost of schema changes.
+        </p>
+        <p>
+          The work will be based on the results obtained in a previous 3-years project (2018-2020) which received fund from the program to which the present call belongs. A significant result was a generic representation of NoSQL schemas which we will use to achieve a platform-independence tool able to support NoSQL, NewSQL, and relational systems.
+        </p>
+        <p>
+          Regarding to the research contributions, we would remark: (i) to extract schema at real-time, (ii) to build a DSL family to manage data and schema; and (iii) to design mechanisms for managing databases in an agile way both at development and production time.
+        </p>
+      </div>
+
+      <div class="row">
+        <h3>Publications</h3>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h2>2022</h2>
+            <ul>
+              <li>Alberto Hernández Chillón, Diego Sevilla Ruiz, Jesús García Molina, <b>Multi-Model Database Engineering based on a Unified Data Model</b>. PhD Thesis. Faculty of Informatics, University of Murcia, Murcia, Spain.</li>
+              <li>Carlos Javier Fernández Candel, Jesús García Molina, Diego Sevilla Ruiz, <b>A Unified Data Metamodel for Relational and NoSQL databases: Schema Extraction and Query</b>. PhD Thesis. Faculty of Informatics, University of Murcia, Murcia, Spain.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr/>
+
+      <div class="row section-separator">
         <h2>YSAAN - A Model-Based Environment to Support NoSQL Data Engineering</h2>
         <div class="col-md-12">
           <br>
@@ -22,8 +72,8 @@
             <dt class="col-sm-3">Funding</dt><dd class="col-sm-9">35.100€</dd>
             <dt class="col-sm-3">Public repository</dt><dd class="col-sm-9"><a href="https://github.com/catedrasaes-umu/NoSQLDataEngineering">https://github.com/catedrasaes-umu/NoSQLDataEngineering</a></dd>
             <dt class="col-sm-3">Keywords</dt>
-            <dd class="col-sm-4"><ul><li>NoSQL databases</li><li>data engineering</li><li>MDE</li><li>database schemas</li></ul></dd>
-            <dd class="col-sm-4"><ul><li>data models</li><li>database design</li><li>code generation</li><li>database tooling</li></ul></dd>
+            <dd class="col-sm-4"><ul><li>NoSQL Databases</li><li>Data Engineering</li><li>MDE</li><li>Database Schemas</li></ul></dd>
+            <dd class="col-sm-4"><ul><li>Data Models</li><li>Database Design</li><li>Code Generation</li><li>Database Tooling</li></ul></dd>
           </dl>
         </div>
       </div>
@@ -45,34 +95,50 @@
 
       <div class="row">
         <h3>Publications</h3>
-        <div class="col-md-12">
-          <h3>2020</h3>
-          <ul>
-            <li>Pablo Muñoz Sánchez, Carlos Javier Fernández Candel, Jesús García Molina, Diego Sevilla Ruiz, <b>Extracting Physical and Logical Schemas for Document Stores</b>. CoMoNoS 2020, under ER 2020 conference, Vienna, Austria.</li>
-            <li>Alberto Hernández Chillón, Diego Sevilla Ruiz, Jesús García Molina, <b>Deimos: A Model-based NoSQL Data Generation Language</b>. CoMoNoS 2020, under ER 2020 conference, Vienna, Austria.</li>
-            <li>Thibaud Masson, Romain Ravet, Francisco Javier Bermúdez, Souhaila Serbout, Diego Sevilla Ruiz, Anthony Cleve, <b>Defining Referential Integrity Constraints in Graph-oriented Datastores</b>. MODELSWARD 2020: 409-416, Valletta, Malta.<a target="_blank" href="https://www.researchgate.net/publication/339208533_Defining_Referential_Integrity_Constraints_in_Graph-oriented_Datastores"><i class="fa fa-download"></i></a></li>
-          </ul>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h2>2021</h2>
+            <ul>
+              <li>Alberto Hernández Chillón, José Ramón Hoyos, Jesús García Molina, Diego Sevilla Ruiz, <b>Discovering Entity Inheritance Relationships in Document Stores</b>. Knowledge-Based Systems 230: 107394.</li>
+              <li>Alberto Hernández Chillón, Diego Sevilla Ruiz, Jesús García Molina, <b>Towards a Taxonomy of Schema Changes for NoSQL Databases: The Orion Language</b>. The 40th International Conference on Conceptual Modeling, ER 2021, St. John's, NL, Canada.</li>
+              <li>Alberto Hernández Chillón, Diego Sevilla Ruiz, Jesús García Molina, <b>Athena: A Database-Independent Schema Definition Language</b>. CoMoNoS 2021, under ER 2021 conference, St. John's, NL, Canada.</li>
+              <li>Carlos Javier Fernández Candel, Jesús García Molina, Diego Sevilla Ruiz, <b>A unified metamodel for NoSQL and relational databases</b>. Information Systems 104: 101898.</li>
+            </ul>
+          </div>
         </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h3>2020</h3>
+            <ul>
+              <li>Pablo Muñoz Sánchez, Carlos Javier Fernández Candel, Jesús García Molina, Diego Sevilla Ruiz, <b>Extracting Physical and Logical Schemas for Document Stores</b>. CoMoNoS 2020, under ER 2020 conference, Vienna, Austria.</li>
+              <li>Alberto Hernández Chillón, Diego Sevilla Ruiz, Jesús García Molina, <b>Deimos: A Model-based NoSQL Data Generation Language</b>. CoMoNoS 2020, under ER 2020 conference, Vienna, Austria.</li>
+              <li>Thibaud Masson, Romain Ravet, Francisco Javier Bermúdez, Souhaila Serbout, Diego Sevilla Ruiz, Anthony Cleve, <b>Defining Referential Integrity Constraints in Graph-oriented Datastores</b>. MODELSWARD 2020: 409-416, Valletta, Malta.</li>
+            </ul>
+          </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-12">
-          <h3>2019</h3>
-          <ul>
-            <li>Alberto Hernández Chillón, Diego Sevilla Ruiz, Jesús García Molina, <b>Análisis de esquemas NoSQL para el procesamiento de variaciones de entidad atípicas</b>. XXIV Jornadas de Ingeniería del Software y Bases de Datos, JISBD 2019, Cáceres, Spain.<a target="_blank" href="https://biblioteca.sistedes.es/submissions//descargas/2019/JISBD/2019-JISBD-096.pdf"><i class="fa fa-download"></i></a></li>
-            <li>Carlos Javier Fernández Candel, Diego Sevilla Ruiz, Jesús García Molina, <b>Utilización de Neo4j para consultar esquemas de bases de datos NoSQL</b>. XXIV Jornadas de Ingeniería del Software y Bases de Datos, JISBD 2019, Cáceres, Spain.<a target="_blank" href="https://biblioteca.sistedes.es/wp-content/uploads/descargas/2019/JISBD/2019-JISBD-082.pdf"><i class="fa fa-download"></i></a></li>
-            <li>Alberto Hernández Chillón, Diego Sevilla Ruiz, Jesús García Molina, Severino Feliciano Morales, <b>A Model-Driven Approach to Generate Schemas for Object-Document Mappers</b>. IEEE Access 7: 59126-59142.<a target="_blank" href="https://ieeexplore.ieee.org/document/8708919"><i class="fa fa-download"></i></a></li>
-          </ul>
+        <div class="row">
+          <div class="col-md-12">
+            <h3>2019</h3>
+            <ul>
+              <li>Alberto Hernández Chillón, Diego Sevilla Ruiz, Jesús García Molina, <b>Análisis de esquemas NoSQL para el procesamiento de variaciones de entidad atípicas</b>. XXIV Jornadas de Ingeniería del Software y Bases de Datos, JISBD 2019, Cáceres, Spain.</li>
+              <li>Carlos Javier Fernández Candel, Diego Sevilla Ruiz, Jesús García Molina, <b>Utilización de Neo4j para consultar esquemas de bases de datos NoSQL</b>. XXIV Jornadas de Ingeniería del Software y Bases de Datos, JISBD 2019, Cáceres, Spain.</li>
+              <li>Alberto Hernández Chillón, Diego Sevilla Ruiz, Jesús García Molina, Severino Feliciano Morales, <b>A Model-Driven Approach to Generate Schemas for Object-Document Mappers</b>. IEEE Access 7: 59126-59142.</li>
+            </ul>
+          </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-md-12">
-          <h3>2018</h3>
-          <ul>
-            <li>Alberto Hernández Chillón, Diego Sevilla Ruiz, Jesús García Molina, <b>Generación de datos NoSQL usando esquemas de bases de datos inferidos</b>. XXIII Jornadas de Ingeniería del Software y Bases de Datos, JISBD 2018, Sevilla, Spain.<a target="_blank" href="https://biblioteca.sistedes.es/submissions/descargas/2018/JISBD/2018-JISBD-037.pdf"><i class="fa fa-download"></i></a></li>
-          </ul>
+        <div class="row">
+          <div class="col-md-12">
+            <h3>2018</h3>
+            <ul>
+              <li>Alberto Hernández Chillón, Diego Sevilla Ruiz, Jesús García Molina, <b>Generación de datos NoSQL usando esquemas de bases de datos inferidos</b>. XXIII Jornadas de Ingeniería del Software y Bases de Datos, JISBD 2018, Sevilla, Spain.</li>
+            </ul>
+          </div>
         </div>
+
       </div>
       <div id="footer"></div>
     </div>
